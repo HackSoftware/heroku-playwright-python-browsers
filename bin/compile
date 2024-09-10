@@ -33,6 +33,10 @@ echo "-----> Installing Playwright executables (env: PLAYWRIGHT_BUILDPACK_BROWSE
 playwright install ${PLAYWRIGHT_BUILDPACK_BROWSERS//,/ }
 echo "-----> Installation done"
 
+echo "-----> Install dependencies"
+playwright install-deps
+echo "-----> Installation done"
+
 # export the file path as a ENV
 # this is meant to be copied over to the $BUILD_DIR under .profile.d/heroku-playwright-python-browsers-defaults.sh and then run
 
